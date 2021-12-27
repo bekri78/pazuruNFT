@@ -1,0 +1,94 @@
+.carousel {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  transform-origin: center center;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.videoImg {
+  border-radius: 16px;
+  height: 100% !important;
+}
+
+.imageAnime {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  position: relative;
+  margin: 5%;
+  transform-origin: center center;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.contain {
+  padding-top: 5%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+
+  grid-template-rows: 0.8fr 1fr;
+  gap: 8px 8px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "f ff fffff ffffff"
+    "f fff ffff fffffff";
+  width: 100%;
+}
+
+.f {
+  grid-area: f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ff {
+  grid-area: ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fff {
+  grid-area: fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fffff {
+  grid-area: fffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ffff {
+  grid-area: ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ffffff {
+  grid-area: ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fffffff {
+  grid-area: fffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
