@@ -1,15 +1,25 @@
-.carousel {
-  -webkit-box-flex: 1;
-  flex-grow: 1;
-  position: relative;
-  overflow: hidden;
-  transform-origin: center center;
-
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+.puzzle3d {
   width: 100%;
+  height: 100vh;
+  background-image: url("../public/puzzle3d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
+.conteneurBtn {
+  margin-left: 10%;
+  width: 50%;
+}
+#tsparticles {
+  height: 300px;
+}
+
+#tsparticles canvas {
+  position: static !important;
+}
 .videoImg {
   border-radius: 16px;
   height: 100% !important;
