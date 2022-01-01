@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Particule from "./Particule";
+import Carousel from "./Carousel";
 import Image from "next/image";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";
@@ -12,6 +13,7 @@ import "@fontsource/roboto/700.css";
 import Button from "@mui/material/Button";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { margin } from "@mui/system";
+import Stepers from "./Stepers";
 
 const Div = styled("div")(({ theme }) => ({
   ...theme.typography.button,
@@ -26,11 +28,13 @@ export default function Layout({ children, page }) {
   return (
     <>
       <div className="puzzle3d">
+        <Particule />
+
         <div className="conteneurBtn">
           <Typography
             variant="h2"
             component="h4"
-            color="#ffebee"
+            color="#00000"
             width={"70%"}
             paddingBottom={5}
           >
@@ -39,7 +43,7 @@ export default function Layout({ children, page }) {
           <Typography
             variant="h4"
             component="h4"
-            color="#ffebee"
+            color="#00000"
             width={"70%"}
             paddingBottom={5}
           >
@@ -50,6 +54,17 @@ export default function Layout({ children, page }) {
           </Button>
         </div>
       </div>
+      <Typography
+        variant="h2"
+        component="h2"
+        color="#00000"
+        width={"70%"}
+        paddingBottom={5}
+        textAlign={"center"}
+        margin={"auto"}
+      >
+        Reconstituer les pièces
+      </Typography>
       <div className="contain">
         <div className="f">
           <video
@@ -140,8 +155,39 @@ export default function Layout({ children, page }) {
           ></path>
         </svg>
       </div>
-      <div>
-        <h1>test</h1>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "100%",
+        }}
+      >
+        <div>
+          <Typography
+            variant="h2"
+            component="h4"
+            color="#00000"
+            width={"70%"}
+            paddingBottom={5}
+            textAlign={"center"}
+            margin={"auto"}
+          >
+            Créez et vendez vos NFT
+          </Typography>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            width: "100%",
+            margin: "auto",
+          }}
+        >
+          <Stepers />
+          <Carousel />
+        </div>
       </div>
     </>
   );

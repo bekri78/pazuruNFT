@@ -1,19 +1,25 @@
 .navbar.active {
-  background: rgba(18, 18, 18, 0.7);
   backdrop-filter: blur(20px);
   transform: translateZ(0px);
-}
-
-.navbar {
-  background: rgba(18, 18, 18, 0.7);
-  backdrop-filter: blur(20px);
-  transform: translateZ(0px);
+  background: rgba(18, 18, 18, 0.34);
 }
 
 #collasible-nav-dropdown {
   font: 600 14px/30px Montserrat, sans-serif;
   transition: all 0.12s ease-in-out 0s;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(15, 15, 15, 0.678);
+
+  text-transform: uppercase;
+  position: relative;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+#nav-Light {
+  font: 600 14px/30px Montserrat, sans-serif;
+  transition: all 0.12s ease-in-out 0s;
+  color: #fff;
+
   text-transform: uppercase;
   position: relative;
   padding: 8px;
@@ -23,9 +29,8 @@
 
 /* .dropdown-menu {} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .navbar {
-    background: rgba(18, 18, 18, 0.7);
     backdrop-filter: blur(20px);
     transform: translateZ(0px);
     border: 10px;
@@ -34,9 +39,7 @@
 
 @media only screen and (max-width: 991px) and (min-width: 769px) {
   .navbar {
-    background: rgba(18, 18, 18, 0.7);
-
     transform: translateZ(0px);
     border: 10px;
   }
-}
+} */

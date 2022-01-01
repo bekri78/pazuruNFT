@@ -1,5 +1,6 @@
 import React from "react";
 import Particles from "react-tsparticles";
+import ImageLogo from "../public/puzzle3d.jpg";
 
 export default function Particule() {
   const particlesInit = (main) => {
@@ -20,7 +21,7 @@ export default function Particule() {
           autoPlay: true,
           background: {
             color: {
-              value: "#000",
+              value: "#fffff",
             },
             image: "",
             position: "",
@@ -59,8 +60,8 @@ export default function Particule() {
                 type: "circle",
               },
               onHover: {
-                enable: true,
-                mode: "trail",
+                enable: false,
+                mode: [],
                 parallax: {
                   enable: false,
                   force: 2,
@@ -141,9 +142,9 @@ export default function Particule() {
                 radius: 200,
               },
               trail: {
-                delay: 0.005,
-                pauseOnStop: true,
-                quantity: 5,
+                delay: 1,
+                pauseOnStop: false,
+                quantity: 1,
                 particles: {
                   color: {
                     value: "#ff0000",
@@ -155,38 +156,15 @@ export default function Particule() {
                   },
                   collisions: {
                     enable: false,
-                    bounce: {
-                      horizontal: {
-                        random: {},
-                      },
-                      vertical: {
-                        random: {},
-                      },
-                    },
-                    overlap: {},
                   },
                   links: {
                     enable: false,
-                    shadow: {},
-                    triangles: {},
                   },
                   move: {
                     outModes: {
                       default: "destroy",
                     },
                     speed: 2,
-                    angle: {},
-                    attract: {
-                      rotate: {},
-                    },
-                    distance: {},
-                    gravity: {},
-                    path: {
-                      delay: {
-                        random: {},
-                      },
-                    },
-                    trail: {},
                   },
                   size: {
                     value: 5,
@@ -198,75 +176,7 @@ export default function Particule() {
                       startValue: "min",
                       destroy: "max",
                     },
-                    random: {},
                   },
-                  bounce: {
-                    horizontal: {
-                      random: {},
-                    },
-                    vertical: {
-                      random: {},
-                    },
-                  },
-                  destroy: {
-                    split: {
-                      factor: {
-                        random: {},
-                      },
-                      rate: {
-                        random: {},
-                      },
-                    },
-                  },
-                  life: {
-                    delay: {
-                      random: {},
-                    },
-                    duration: {
-                      random: {},
-                    },
-                  },
-                  number: {
-                    density: {},
-                  },
-                  opacity: {
-                    animation: {},
-                    random: {},
-                  },
-                  roll: {
-                    darken: {},
-                    enlighten: {},
-                  },
-                  rotate: {
-                    animation: {},
-                  },
-                  shadow: {
-                    offset: {},
-                  },
-                  shape: {},
-                  stroke: {
-                    color: {
-                      value: "",
-                      animation: {
-                        count: 0,
-                        enable: false,
-                        offset: {
-                          max: 0,
-                          min: 0,
-                        },
-                        speed: 0,
-                        sync: false,
-                      },
-                    },
-                  },
-                  tilt: {
-                    animation: {},
-                  },
-                  twinkle: {
-                    lines: {},
-                    particles: {},
-                  },
-                  wobble: {},
                 },
               },
             },
@@ -313,7 +223,7 @@ export default function Particule() {
                   value: 1,
                 },
               },
-              enable: true,
+              enable: false,
               mode: "bounce",
               overlap: {
                 enable: true,
@@ -321,14 +231,14 @@ export default function Particule() {
               },
             },
             color: {
-              value: "#f00",
+              value: "#ffffff",
               animation: {
                 h: {
                   count: 0,
-                  enable: true,
+                  enable: false,
                   offset: 0,
-                  speed: 50,
-                  sync: false,
+                  speed: 1,
+                  sync: true,
                 },
                 s: {
                   count: 0,
@@ -394,11 +304,11 @@ export default function Particule() {
             links: {
               blink: false,
               color: {
-                value: "random",
+                value: "#fff",
               },
               consent: false,
               distance: 100,
-              enable: true,
+              enable: false,
               frequency: 1,
               opacity: 1,
               shadow: {
@@ -452,25 +362,25 @@ export default function Particule() {
                 options: {},
               },
               outModes: {
-                default: "out",
-                bottom: "out",
-                left: "out",
-                right: "out",
-                top: "out",
+                default: "destroy",
+                bottom: "destroy",
+                left: "destroy",
+                right: "destroy",
+                top: "destroy",
               },
               random: false,
-              size: false,
-              speed: 2,
+              size: true,
+              speed: 5,
               spin: {
                 acceleration: 0,
                 enable: false,
               },
               straight: false,
               trail: {
-                enable: false,
-                length: 10,
+                enable: true,
+                length: 3,
                 fillColor: {
-                  value: "#000000",
+                  value: "",
                 },
               },
               vibrate: false,
@@ -478,17 +388,17 @@ export default function Particule() {
             },
             number: {
               density: {
-                enable: true,
+                enable: false,
                 area: 800,
                 factor: 1000,
               },
               limit: 0,
-              value: 100,
+              value: 0,
             },
             opacity: {
               random: {
-                enable: true,
-                minimumValue: 0.3,
+                enable: false,
+                minimumValue: 0.1,
               },
               value: {
                 min: 0.3,
@@ -496,12 +406,11 @@ export default function Particule() {
               },
               animation: {
                 count: 0,
-                enable: true,
-                speed: 0.5,
+                enable: false,
+                speed: 2,
                 sync: false,
                 destroy: "none",
                 startValue: "random",
-                minimumValue: 0.3,
               },
             },
             orbit: {
@@ -579,51 +488,24 @@ export default function Particule() {
             },
             size: {
               random: {
-                enable: true,
+                enable: false,
                 minimumValue: 1,
               },
               value: {
                 min: 1,
-                max: 3,
+                max: 10,
               },
               animation: {
                 count: 0,
-                enable: true,
-                speed: 3,
+                enable: false,
+                speed: 5,
                 sync: false,
                 destroy: "none",
                 startValue: "random",
-                minimumValue: 1,
               },
             },
             stroke: {
               width: 0,
-              color: {
-                value: "",
-                animation: {
-                  h: {
-                    count: 0,
-                    enable: false,
-                    offset: 0,
-                    speed: 0,
-                    sync: false,
-                  },
-                  s: {
-                    count: 0,
-                    enable: false,
-                    offset: 0,
-                    speed: 1,
-                    sync: true,
-                  },
-                  l: {
-                    count: 0,
-                    enable: false,
-                    offset: 0,
-                    speed: 1,
-                    sync: true,
-                  },
-                },
-              },
             },
             tilt: {
               random: {
@@ -672,6 +554,58 @@ export default function Particule() {
           responsive: [],
           themes: [],
           zLayers: 100,
+          emitters: {
+            autoPlay: true,
+            fill: true,
+            life: {
+              wait: false,
+            },
+            rate: {
+              quantity: 10,
+              delay: 0.25,
+            },
+            shape: "square",
+            startCount: 0,
+            size: {
+              mode: "percent",
+              height: 0,
+              width: 0,
+            },
+            direction: "none",
+            position: {
+              x: 50,
+              y: 50,
+            },
+            spawnColor: {
+              value: "#ff0000",
+              animation: {
+                h: {
+                  count: 0,
+                  enable: true,
+                  offset: 0,
+                  speed: 5,
+                  sync: true,
+                },
+                s: {
+                  count: 0,
+                  enable: false,
+                  offset: 0,
+                  speed: 1,
+                  sync: true,
+                },
+                l: {
+                  count: 0,
+                  enable: true,
+                  offset: {
+                    min: 20,
+                    max: 80,
+                  },
+                  speed: 0,
+                  sync: true,
+                },
+              },
+            },
+          },
         }}
       />
     </>

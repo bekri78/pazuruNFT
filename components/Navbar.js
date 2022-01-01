@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../public/pazuruLogo.png";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 
-var navigation = {
+var navigationDark = {
   font: "600 14px/30px Montserrat,sans-serif",
   transition: "all 0.12s ease-in-out 0s",
-  color: " rgba(255, 255, 255, 0.5)",
+  color: "rgba(15, 15, 15, 0.678)",
   textTransform: "uppercase",
+
+  position: "relative",
+  padding: "8px",
+  cursor: "pointer",
+  transition: "all .2s linear",
+};
+
+var navigationLight = {
+  font: "600 14px/30px Montserrat,sans-serif",
+  transition: "all 0.12s ease-in-out 0s",
+  color: "#fff",
+  textTransform: "uppercase",
+
   position: "relative",
   padding: "8px",
   cursor: "pointer",
@@ -26,6 +39,21 @@ export default function Navbare(props) {
     }
   };
 
+  useEffect(() => {
+    const changeBackground = () => {
+      let y = window.scrollY;
+      if (y >= 70) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+
+    window.addEventListener("scroll", changeBackground);
+    return () => {
+      cleanup;
+    };
+  }, []);
   return (
     <Navbar
       className={navbar ? "navbar active" : "navbar"}
@@ -50,20 +78,35 @@ export default function Navbare(props) {
         className="justify-content-end"
       >
         <Nav className="ml-auto">
-          <Nav.Link href="#service" style={navigation}>
+          <Nav.Link
+            href="#service"
+            style={navbar ? navigationLight : navigationDark}
+          >
             Service
           </Nav.Link>
-          <Nav.Link href="#portfolio" style={navigation}>
+          <Nav.Link
+            href="#portfolio"
+            style={navbar ? navigationLight : navigationDark}
+          >
             Portfolio
           </Nav.Link>
-          <Nav.Link href="#skill" style={navigation}>
+          <Nav.Link
+            href="#skill"
+            style={navbar ? navigationLight : navigationDark}
+          >
             Skill
           </Nav.Link>
 
-          <Nav.Link href="#aPropos" style={navigation}>
+          <Nav.Link
+            href="#aPropos"
+            style={navbar ? navigationLight : navigationDark}
+          >
             A propos
           </Nav.Link>
-          <NavDropdown title="Theme" id="collasible-nav-dropdown">
+          <NavDropdown
+            title="Theme"
+            id={navbar ? "nav-Light" : "collasible-nav-dropdown"}
+          >
             <NavDropdown.Item
               onClick={() => props.changeWord("light")}
               id="changeTheme"
@@ -77,7 +120,10 @@ export default function Navbare(props) {
               Sombre
             </NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#contact" style={navigation}>
+          <Nav.Link
+            href="#contact"
+            style={navbar ? navigationLight : navigationDark}
+          >
             Contact
           </Nav.Link>
         </Nav>

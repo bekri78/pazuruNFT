@@ -1,20 +1,34 @@
 .puzzle3d {
   width: 100%;
   height: 100vh;
-  background-image: url("../public/puzzle3d.jpg");
+  background-image: url("../public/whitePuzzle.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
-
+.conteneur-particule {
+  width: 100%;
+  height: 100%;
+}
 .conteneurBtn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: relative;
   margin-left: 10%;
+  padding-top: 5%;
   width: 50%;
+  height: 100%;
 }
 #tsparticles {
-  height: 300px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-image: url("https://marcbruederlin.github.io/particles.js/img/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  */
 }
 
 #tsparticles canvas {
