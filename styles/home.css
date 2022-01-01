@@ -116,3 +116,44 @@
   justify-content: center;
   align-items: center;
 }
+.conteneur-video {
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgb(243, 251, 254);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.overlay-image {
+  background: url(https://static.opensea.io/gas-free/video-background.svg)
+    center center / contain no-repeat;
+  padding: 40px 100px 80px;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 1080px;
+  height: 608px;
+  left: 0px;
+  top: 0px;
+}
+
+.videoText {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(112, 122, 131);
+}
+
+.puzzle-container {
+  height: 100%;
+  margin: 5%;
+}
+
+.jigsaw-puzzle {
+  height: 80vh !important;
+}
